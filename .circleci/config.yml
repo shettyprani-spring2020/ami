@@ -3,12 +3,11 @@ jobs:
   validate:
     docker:
       - image: hashicorp/packer:1.1.1
-    working_directory: ~/packer
     steps:
       - checkout
       - run:
           name: Validate base
-          command: packer validate ./ubuntu_ami.json
+          command: packer validate ubuntu_ami.json
   build-base:
     docker:
       - image: hashicorp/packer:1.1.1
