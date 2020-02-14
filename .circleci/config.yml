@@ -18,11 +18,11 @@ jobs:
           name: Build AMI
           command: >
             packer build 
-            -var 'aws_access_key=${ACCESS_KEY}' 
-            -var 'aws_secret_key=${SECRET_KEY}' 
-            -var 'aws_region=${AWS_REGION}' 
-            -var 'ami_users=${AMI_USERS}' 
-            -var 'source_ami=${SOURCE_AMI}' 
+            -var 'aws_access_key='${ACCESS_KEY} 
+            -var 'aws_secret_key='${SECRET_KEY} 
+            -var 'aws_region='${AWS_REGION} 
+            -var 'ami_users='${AMI_USERS} 
+            -var 'source_ami='${SOURCE_AMI} 
             ubuntu_ami.json
 workflows:
   version: 2
