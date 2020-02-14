@@ -22,7 +22,7 @@ jobs:
             -var 'aws_region=$REGION' \
             -var 'ami_users=$AMI_USERS' \
             -var 'source_ami=$SOURCE_AMI' \
-            ami.json
+            ubnutu_ami.json
 workflows:
   version: 2
   build-and-deploy:
