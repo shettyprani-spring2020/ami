@@ -1,6 +1,6 @@
 # AWS AMI
 
-## Validate Template
+## Validate Template 
 
 ```sh
 packer validate ubuntu-ami.json
