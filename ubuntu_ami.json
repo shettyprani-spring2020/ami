@@ -34,7 +34,17 @@
   "provisioners": [
     {
       "type": "shell",
-      "inline": ["sudo apt-get update", "sudo apt-get install curl -y"]
+      "inline": [
+        "sudo apt-get update",
+        "sudo apt-get install curl -y",
+        "sudo apt-get install wget",
+        "cd /home/ubuntu",
+        "wget https://aws-codedeploy-us-east-1.s3.us-east-1-identifier.amazonaws.com/latest/install",
+        "chmod +x ./install",
+        "sudo ./install auto",
+        "sudo service codedeploy-agent start",
+        "sudo service codedeploy-agent status"
+      ]
     }
   ]
 }
